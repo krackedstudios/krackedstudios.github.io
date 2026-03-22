@@ -118,11 +118,10 @@
 
     /* HERO */
     #hero {
-      min-height: 100vh;
       display: flex;
       flex-direction: column;
       justify-content: center;
-      padding-top: 80px;
+	  min-height: 20vh;
     }
 
     .hero-tag {
@@ -131,7 +130,7 @@
       color: var(--accent);
       letter-spacing: 4px;
       text-transform: uppercase;
-      margin-bottom: 20px;
+      margin-bottom: 40px;
       opacity: 0;
       animation: fadeUp 0.6s ease forwards 0.2s;
     }
@@ -273,15 +272,15 @@
 
     /* ABOUT */
     #about {
-      padding-top: 120px;
-      padding-bottom: 100px;
+      padding-top: 40px;
+      padding-bottom: 40px;
     }
 
     .about-grid {
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 1fr;
       gap: 60px;
-      align-items: center;
+      align-items: left;
     }
 
     .about-text p {
@@ -295,7 +294,7 @@
 
     .about-stats {
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 1fr;
       gap: 16px;
     }
 
@@ -588,129 +587,43 @@
 <nav>
   <div class="nav-logo">KRA<span>CKED </span>Studios</div>
   <ul class="nav-links">
-    <li><a href="./#about">Details</a></li>
-    <li><a href="./#projects">Projects</a></li>
-    <li><a href="./#social">members</a></li>
+    <li><a href="../index.html#about">Details</a></li>
+    <li><a href="../index.html#projects">Projects</a></li>
+    <li><a href="../index.html#social">members</a></li>
   </ul>
 </nav>
 
-<!-- HERO -->
 <section id="hero">
-  <div class="hero-tag">Game Studio</div>
-  <div class="hero-name">
-    <span class="line1">KRACKED</span>
-    <span class="line2">Studios</span>
-  </div>
-  <p class="hero-desc">
-    Developing video games that feels good, looks good,  — and best of all performs good.
-  </p>
   <div class="hero-cta">
-    <a href="https://www.youtube.com/@krackedstudios" target="_blank" class="btn btn-primary">▶ Watch on YouTube</a>
-    <a href="updates/index.html" class="btn btn-outline">Updates →</a>
-  </div>
-  <div class="hero-scroll">
-    <div class="scroll-line"></div>
-    scroll to explore
+    <a href="../index.html" class="btn btn-outline">Go Back →</a>
   </div>
 </section>
 
-<!-- ABOUT -->
 <section id="about">
   <div class="section-header reveal">
-    <div class="section-tag">details</div>
-    <h2 class="section-title">About Us</h2>
+    <div class="section-tag">Updates</div>
+    <h2 class="section-title">0.2 "Protocol 6"</h2>
     <div class="section-line"></div>
   </div>
   <div class="about-grid">
     <div class="about-text reveal">
-      <p>Hey, This is the <span>KRACKED Studios</span> team — a team of some random teenagers who thought it would be fun to make games that would run on potatos, while looking good and enjoyable.</p>
-      <p>Whether it's Android, Windows or Linux. we will be making our games compatable with eachother!</p>
-    </div>
-    <div class="about-stats reveal">
-      <div class="stat-card">
-        <div class="stat-number">100%</div>
-        <div class="stat-label">Creative</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-number">24/7</div>
-        <div class="stat-label">Brainstorming</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-number">Infinite</div>
-        <div class="stat-label">Ideas</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-number">01</div>
-        <div class="stat-label">Members</div>
-      </div>
+      <p>- <span>Protocol 6</span> has entered the state of Planning and Discussion.</p>
+      <p>Protocol 6 is being planned and devs are brainstorming ideas and the themes of the game to bring a good expirience to the players. Everything is going smooth so far and the game is expected to enter development by the <span>first week of April</span></p>
     </div>
   </div>
 </section>
 
-<!-- PROJECTS -->
-<section id="projects">
+<section id="about">
   <div class="section-header reveal">
-    <div class="section-tag">projects</div>
-    <h2 class="section-title">Currently Working On:</h2>
+    <div class="section-tag">Updates</div>
+    <h2 class="section-title">0.1 "Webpage"</h2>
     <div class="section-line"></div>
   </div>
-  <div class="projects-grid">
-    <div class="project-card reveal">
-      <div class="project-num">// Planning</div>
-      <div class="project-icon">🎮</div>
-      <div class="project-title">Protocol 6</div>
-      <p class="project-desc">A multiplayer horror game to play with friends... or alone at night</p>
-      <span class="project-tag">VIDEO GAME</span>
+  <div class="about-grid">
+    <div class="about-text reveal">
+      <p>- <span>KRACKED Studios</span> now has a functioning webpage.</p>
+      <p>This is the official webpage of <span>KRACKED Studios</span>! Focusing mainly on publishing the updates and progress in development of project current taking place in the Studio. This site also serves as place to inform about the members of the Studio.</p>
     </div>
-    <div class="project-card reveal">
-      <div class="project-num">// Unknown</div>
-      <div class="project-icon">❔</div>
-      <div class="project-title">Unavailable</div>
-      <p class="project-desc">...</p>
-      <span class="project-tag">---</span>
-    </div>
-    <div class="project-card reveal">
-      <div class="project-num">// Unknown</div>
-      <div class="project-icon">❔</div>
-      <div class="project-title">Unavailable</div>
-      <p class="project-desc"></p>
-      <span class="project-tag">---</span>
-    </div>
-  </div>
-</section>
-
-<!-- SOCIAL -->
-<section id="social">
-  <div class="section-header reveal">
-    <div class="section-tag">Members</div>
-    <h2 class="section-title">Meet the team!</h2>
-    <div class="section-line"></div>
-  </div>
-  <div class="social-grid">
-    <a href="xeoniii/index.html" class="social-card yt reveal" >
-      <div class="social-icon">👤</div>
-      <div class="social-info">
-        <div class="social-platform">Xeoniii</div>
-        <div class="social-handle">@xeon957</div>
-      </div>
-      <div class="social-arrow">→</div>
-    </a>
-    <a href="null" class="social-card tw reveal">
-      <div class="social-icon">👤</div>
-      <div class="social-info">
-        <div class="social-platform">Unknown</div>
-        <div class="social-handle">@xunknown</div>
-      </div>
-      <div class="social-arrow">→</div>
-    </a>
-    <a href="null" class="social-card ig reveal">
-      <div class="social-icon">👤</div>
-      <div class="social-info">
-        <div class="social-platform">Unknown</div>
-        <div class="social-handle">@unknown</div>
-      </div>
-      <div class="social-arrow">→</div>
-    </a>
   </div>
 </section>
 

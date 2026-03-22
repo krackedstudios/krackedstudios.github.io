@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>KRACKED Studios</title>
+  <title>Xeoniii</title>
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Share+Tech+Mono&family=Rajdhani:wght@300;400;600&display=swap" rel="stylesheet"/>
   <style>
     *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
@@ -117,13 +117,13 @@
     }
 
     /* HERO */
-    #hero {
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      padding-top: 80px;
-    }
+	#hero {
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start; /* Switch from center to flex-start */
+	padding-top: 200px !important; /* Forces a 200px gap from the top */
+	}
 
     .hero-tag {
       font-family: 'Share Tech Mono', monospace;
@@ -140,6 +140,7 @@
       content: '//';
       color: var(--accent3);
       margin-right: 8px;
+	  height: 180px;
     }
 
     .hero-name {
@@ -155,6 +156,8 @@
     .hero-name .line1 { color: #fff; }
     .hero-name .line2 {
       color: transparent;
+	  font-size: 2.3rem;
+	  letter-spacing: 2px;
       -webkit-text-stroke: 1.5px var(--accent);
       text-shadow: none;
       display: block;
@@ -241,7 +244,7 @@
 
     /* SECTION HEADERS */
     .section-header {
-      margin-bottom: 56px;
+      margin-bottom: 46px;
     }
 
     .section-tag {
@@ -250,7 +253,7 @@
       color: var(--accent2);
       letter-spacing: 4px;
       text-transform: uppercase;
-      margin-bottom: 12px;
+      margin-bottom: 0px;
     }
 
     .section-tag::before { content: '[ '; }
@@ -273,7 +276,7 @@
 
     /* ABOUT */
     #about {
-      padding-top: 120px;
+      padding-top: 0px;
       padding-bottom: 100px;
     }
 
@@ -299,45 +302,60 @@
       gap: 16px;
     }
 
-    .stat-card {
-      background: var(--card);
-      border: 1px solid var(--border);
-      padding: 24px;
-      position: relative;
-      overflow: hidden;
-      transition: border-color 0.3s, transform 0.3s;
-    }
+	.stat-card {
+	background: var(--card);
+	border: 1px solid var(--border);
+	padding: 24px;
+	position: relative;
+	overflow: hidden;
+	transition: border-color 0.3s, transform 0.3s;
+	cursor: pointer; /* Makes the whole card feel clickable */
+	}
 
-    .stat-card::before {
-      content: '';
-      position: absolute;
-      top: 0; left: 0;
-      width: 3px;
-      height: 100%;
-      background: linear-gradient(to bottom, var(--accent), var(--accent2));
-    }
+	.stat-card::before {
+	content: '';
+	position: absolute;
+	top: 0; left: 0;
+	width: 3px;
+	height: 100%;
+	background: linear-gradient(to bottom, var(--accent), var(--accent2));
+	}
 
-    .stat-card:hover {
-      border-color: rgba(0,240,255,0.4);
-      transform: translateY(-4px);
-    }
+	.stat-card:hover {
+	border-color: rgba(0,240,255,0.4);
+	transform: translateY(-4px);
+	}
 
-    .stat-number {
-      font-family: 'Orbitron', monospace;
-      font-size: 1.9rem;
-      font-weight: 900;
-      color: var(--accent);
-      line-height: 1;
-    }
+	/* --- THE FIXES ARE BELOW --- */
 
-    .stat-label {
-      font-family: 'Share Tech Mono', monospace;
-      font-size: 0.75rem;
-      color: drak-blue);
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      margin-top: 6px;
-    }
+	/* 1. Target the link properly and remove text styling */
+	.stat-card a {
+	text-decoration: none;
+	display: block; /* Makes the link fill the space */
+	color: inherit; 
+	}
+
+	/* 2. Update .stat-number to work as a link or a div */
+	.stat-number {
+	font-family: 'Orbitron', monospace;
+	font-size: 1.9rem;
+	font-weight: 900;
+	color: var(--accent); /* This brings your color back */
+	line-height: 1;
+	display: block;
+	}
+
+	/* 3. Fixed the 'drak-blue' typo and missing parenthesis */
+	.stat-label {
+	font-family: 'Share Tech Mono', monospace;
+	font-size: 0.75rem;
+	color: drak-blue; /* Use 'darkblue' or a hex code like #00008b */
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	margin-top: 6px;
+	display: block;
+	}
+
 
     /* PROJECTS */
     #projects {
@@ -588,129 +606,64 @@
 <nav>
   <div class="nav-logo">KRA<span>CKED </span>Studios</div>
   <ul class="nav-links">
-    <li><a href="./#about">Details</a></li>
-    <li><a href="./#projects">Projects</a></li>
-    <li><a href="./#social">members</a></li>
+    <li><a href="../index.html#about">Details</a></li>
+    <li><a href="../index.html#projects">Projects</a></li>
+    <li><a href="../index.html#social">members</a></li>
   </ul>
 </nav>
 
-<!-- HERO -->
 <section id="hero">
-  <div class="hero-tag">Game Studio</div>
+  <div class="hero-tag">MEMBER</div>
   <div class="hero-name">
-    <span class="line1">KRACKED</span>
-    <span class="line2">Studios</span>
+    <span class="line1">Xeoniii</span>
+    <span class="line2">Founder & Lead Developer</span>
   </div>
   <p class="hero-desc">
-    Developing video games that feels good, looks good,  — and best of all performs good.
+    Founder of KRACKED Studios and Lead Developer.
   </p>
   <div class="hero-cta">
-    <a href="https://www.youtube.com/@krackedstudios" target="_blank" class="btn btn-primary">▶ Watch on YouTube</a>
-    <a href="updates/index.html" class="btn btn-outline">Updates →</a>
-  </div>
-  <div class="hero-scroll">
-    <div class="scroll-line"></div>
-    scroll to explore
+    <a href="https://www.youtube.com/@xeon957" target="_blank" class="btn btn-primary">▶ Find on YouTube</a>
+    <a href="../index.html#social" class="btn btn-outline">Go Back →</a>
   </div>
 </section>
 
-<!-- ABOUT -->
 <section id="about">
   <div class="section-header reveal">
     <div class="section-tag">details</div>
-    <h2 class="section-title">About Us</h2>
+    <h2 class="section-title">About Me</h2>
     <div class="section-line"></div>
   </div>
   <div class="about-grid">
     <div class="about-text reveal">
-      <p>Hey, This is the <span>KRACKED Studios</span> team — a team of some random teenagers who thought it would be fun to make games that would run on potatos, while looking good and enjoyable.</p>
-      <p>Whether it's Android, Windows or Linux. we will be making our games compatable with eachother!</p>
+      <p>Hey, I am <span>Xeoniii</span> — The founder of KRACKED Studios and Lead Developer for games at KRACKED Studios.</p>
+      <p>I also make YouTube Content And Minecraft Modding! Please check it out and support me.</p>
     </div>
     <div class="about-stats reveal">
       <div class="stat-card">
-        <div class="stat-number">100%</div>
-        <div class="stat-label">Creative</div>
+        <div class="stat-number">
+		<a href="https://modrinth.com/user/Xeoniii" target="_blank">Mods</a>
+		</div>
+        <div class="stat-label">@modrinth.com</div>
       </div>
       <div class="stat-card">
-        <div class="stat-number">24/7</div>
-        <div class="stat-label">Brainstorming</div>
+        <div class="stat-number">
+		<a href="https://www.youtube.com/@xeon957" target="_blank">YouTube</a>
+		</div>
+        <div class="stat-label">@xeon957</div>
       </div>
       <div class="stat-card">
-        <div class="stat-number">Infinite</div>
-        <div class="stat-label">Ideas</div>
+        <div class="stat-number">
+		<a href="https://discord.gg/Sd9FsMBU3K" target="_blank">Discord</a>
+		</div>
+        <div class="stat-label">7th Universe</div>
       </div>
-      <div class="stat-card">
-        <div class="stat-number">01</div>
-        <div class="stat-label">Members</div>
+	  <div class="stat-card">
+        <div class="stat-number">
+		<a href="#xeoniii">000000</a>
+		</div>
+        <div class="stat-label">Founder</div>
       </div>
     </div>
-  </div>
-</section>
-
-<!-- PROJECTS -->
-<section id="projects">
-  <div class="section-header reveal">
-    <div class="section-tag">projects</div>
-    <h2 class="section-title">Currently Working On:</h2>
-    <div class="section-line"></div>
-  </div>
-  <div class="projects-grid">
-    <div class="project-card reveal">
-      <div class="project-num">// Planning</div>
-      <div class="project-icon">🎮</div>
-      <div class="project-title">Protocol 6</div>
-      <p class="project-desc">A multiplayer horror game to play with friends... or alone at night</p>
-      <span class="project-tag">VIDEO GAME</span>
-    </div>
-    <div class="project-card reveal">
-      <div class="project-num">// Unknown</div>
-      <div class="project-icon">❔</div>
-      <div class="project-title">Unavailable</div>
-      <p class="project-desc">...</p>
-      <span class="project-tag">---</span>
-    </div>
-    <div class="project-card reveal">
-      <div class="project-num">// Unknown</div>
-      <div class="project-icon">❔</div>
-      <div class="project-title">Unavailable</div>
-      <p class="project-desc"></p>
-      <span class="project-tag">---</span>
-    </div>
-  </div>
-</section>
-
-<!-- SOCIAL -->
-<section id="social">
-  <div class="section-header reveal">
-    <div class="section-tag">Members</div>
-    <h2 class="section-title">Meet the team!</h2>
-    <div class="section-line"></div>
-  </div>
-  <div class="social-grid">
-    <a href="xeoniii/index.html" class="social-card yt reveal" >
-      <div class="social-icon">👤</div>
-      <div class="social-info">
-        <div class="social-platform">Xeoniii</div>
-        <div class="social-handle">@xeon957</div>
-      </div>
-      <div class="social-arrow">→</div>
-    </a>
-    <a href="null" class="social-card tw reveal">
-      <div class="social-icon">👤</div>
-      <div class="social-info">
-        <div class="social-platform">Unknown</div>
-        <div class="social-handle">@xunknown</div>
-      </div>
-      <div class="social-arrow">→</div>
-    </a>
-    <a href="null" class="social-card ig reveal">
-      <div class="social-icon">👤</div>
-      <div class="social-info">
-        <div class="social-platform">Unknown</div>
-        <div class="social-handle">@unknown</div>
-      </div>
-      <div class="social-arrow">→</div>
-    </a>
   </div>
 </section>
 
