@@ -338,7 +338,7 @@
 	/* 2. Update .stat-number to work as a link or a div */
 	.stat-number {
 	font-family: 'Orbitron', monospace;
-	font-size: 1.9rem;
+	font-size: 1.7rem;
 	font-weight: 900;
 	color: var(--accent); /* This brings your color back */
 	line-height: 1;
@@ -540,6 +540,59 @@
       color: var(--muted);
       letter-spacing: 2px;
     }
+	
+		.footer-pc {
+		position: relative;
+		z-index: 1;
+		border-top: 1px solid var(--border);
+		padding: 32px 48px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	
+	.footer-mobile {
+		display: none !important; /* Hide mobile footer on PC */
+	}
+	
+	@media (max-width: 768px) {
+		.footer-pc {
+			display: none !important; /* Hide PC footer on Android */
+		}
+
+		.footer-mobile {
+			display: flex !important;
+			flex-direction: column; /* Stack elements vertically */
+			align-items: center;
+			gap: 20px;
+			padding: 40px 20px;
+			border-top: 1px solid var(--border);
+			background: rgba(5, 8, 16, 0.95); /* Slight transparency */
+		}
+
+		.mobile-links {
+			display: flex;
+			flex-wrap: wrap; /* Wraps links if screen is very narrow */
+			justify-content: center;
+			gap: 15px;
+			list-style: none;
+			padding: 0;
+		}
+
+		.mobile-links a {
+			font-family: 'Share Tech Mono', monospace;
+			font-size: 0.8rem;
+			color: var(--accent);
+			text-decoration: none;
+			text-transform: uppercase;
+			letter-spacing: 1px;
+		}
+
+		/* Hide the top nav links on mobile to keep it clean */
+		nav .nav-links {
+			display: none;
+		}
+	}
 
     /* SCANLINE EFFECT */
     .scanline {
@@ -669,9 +722,22 @@
 </section>
 
 <!-- FOOTER -->
-<footer>
+<footer class="footer-pc">
   <div class="footer-logo">KRACKED Studios</div>
-  <div class="footer-copy">© 2026 KRACKED Studios — ALL RIGHTS RESERVED v1.06</div>
+  <div class="footer-copy">© 2026 KRACKED Studios — ALL RIGHTS RESERVED v1.07</div>
+</footer>
+
+<footer class="footer-mobile">
+  <div class="footer-logo">KRA<span>CKED</span> Studios</div>
+  
+  <ul class="mobile-links">
+    <li><a href="../index.html#about">Details</a></li>
+    <li><a href="../index.html#projects">Projects</a></li>
+    <li><a href="../index.html#social">Members</a></li>
+    <li><a href="https://discord.gg/yqK7G5j7AS">Discord</a></li>
+  </ul>
+
+  <div class="footer-copy">© 2026 KRACKED Studios — v1.07</div>
 </footer>
 
 <script>
